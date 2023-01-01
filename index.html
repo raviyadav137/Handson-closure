@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  
+  <pre>
+    <h3>
+ Q1:-function counter(){
+ var counter = 0;
+
+function IncreaseCounter() {
+ return counter += 1;
+    };
+
+ return IncreaseCounter;
+}
+
+var counter = counter();
+alert(counter());
+alert(counter());
+alert(counter());
+alert(counter());
+</h3>
+
+Output:
+1
+2
+3
+4
+</pre>
+<pre>
+<h3>
+  Q2:-let count = 0;
+(function () {
+  if (count === 0) {
+    let count = 1;
+    console.log(count); // What is logged?
+  }
+  console.log(count); // What is logged?
+})();
+</h3>
+Output:
+1
+0
+</pre>
+<pre>
+<h3>Q3:-
+for (var i = 0; i < 3; i++) {
+setTimeout(function log() {
+ console.log(i); // What is logged?
+}, 1000);
+}
+</h3>
+Output:
+3
+</pre>
+<h3>Q4Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.</h3>
+
+<pre><h3>
+  Q4:-function Rectangle(){
+    let length=20;
+    function areaOfRectangle(){
+       let breadth=10;
+       let result=length*breadth;
+       document.write(result);
+    } 
+    areaOfRectangle();
+       }
+       Rectangle();
+  </h3>
+  Output:
+  200
+  </pre>
+  <h3>Q.5 Take a variable in outer function and create an inner function to increase the counter every time it is
+    called</h3>
+<pre><h3>
+    function outertFun(l){
+        function innerFun(){
+            l++;
+            console.log(l);
+        }
+        innerFun();
+        innerFun();
+        innerFun();
+    }
+    outerFun(10);</h3>
+
+    Output : 11 12 13
+</pre>
+
+
+<h3>Q.6 Print Output</h3>
+<pre><h3>
+    var a = 12;
+    (function () {
+        alert(a);
+    })();
+</h3>
+    Output : 12
+    //We will get output in alert box.
+</pre>
+
+
+<h4>Q.7 Find the Output</h4>
+<pre><h3>
+    var a = 10;
+    var x = (function () {
+        var a = 12;
+        return function () {
+            alert(a);
+        };
+    })();
+    x();</h3>
+
+    Output : 12
+    //We will get output in alert box.
+</pre>
+
+
+<h4>Q.8 Find the Output</h4>
+<pre><h3>
+    var globalVar = "xyz";
+
+    (function outerFunc(outerArg) {
+        var outerVar = 'a';
+
+        (function innerFunc(innerArg) {
+            var innerVar = 'b';
+
+            console.log(
+                "outerArg = " + outerArg + "\n" +
+                "innerArg = " + innerArg + "\n" +
+                "outerVar = " + outerVar + "\n" +
+                "innerVar = " + innerVar + "\n" +
+                "globalVar = " + globalVar);
+
+        })(456);
+    })(123);</h3>
+    
+    Output :
+            outerArg = 123
+            innerArg = 456
+            outerVar = a
+            innerVar = b
+            globalVar = xyz
+</pre>
+</script>
+</body>
+</html>
